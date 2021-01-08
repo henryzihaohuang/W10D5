@@ -11,15 +11,20 @@ import React from 'react';
 // }
 
 class ToDoList extends React.Component {
-    constructor (props) {
-        super(props)
-    }
+   
     render() {
-        debugger
+        const {todos, receiveTodo} = this.props
+        
 
+        const titles = this.props.todos.map((el) => {
+            return el.title
+        });
+
+debugger
         return(
+            
             <ul>
-                <li key=""></li>
+                <li>{this.props.todos.title}</li>
             </ul>
         )
 

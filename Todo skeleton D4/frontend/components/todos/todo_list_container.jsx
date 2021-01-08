@@ -5,9 +5,10 @@ import allTodos from '../../reducers/selectors';
 
 
 const mapStateToProps = state => {
-    debugger
-        ({
-        todos: allTodos(state)
+    // debugger
+       return ({
+        todos: allTodos(state),
+        state
     });
 }
 

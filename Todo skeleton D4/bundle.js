@@ -212,19 +212,23 @@ var ToDoList = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(ToDoList);
 
-  function ToDoList(props) {
+  function ToDoList() {
     _classCallCheck(this, ToDoList);
 
-    return _super.call(this, props);
+    return _super.apply(this, arguments);
   }
 
   _createClass(ToDoList, [{
     key: "render",
     value: function render() {
+      var _this$props = this.props,
+          todos = _this$props.todos,
+          receiveTodo = _this$props.receiveTodo;
+      var titles = this.props.todos.map(function (el) {
+        return el.title;
+      });
       debugger;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: ""
-      }));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.props.todos.title));
     }
   }]);
 
@@ -254,10 +258,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state) {
-  debugger;
-  ({
-    todos: Object(_reducers_selectors__WEBPACK_IMPORTED_MODULE_3__["default"])(state)
-  });
+  // debugger
+  return {
+    todos: Object(_reducers_selectors__WEBPACK_IMPORTED_MODULE_3__["default"])(state),
+    state: state
+  };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
@@ -306,12 +311,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var allTodos = function allTodos(store) {
-  debugger;
-  var ids = Object.keys(store);
+  // debugger
+  var ids = Object.keys(store.todos);
   console.log(ids);
   var mappedIds = ids.map(function (id) {
-    return store[id];
-  });
+    return store.todos[id];
+  }); // debugger
+
   return mappedIds;
 };
 

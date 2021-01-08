@@ -4,10 +4,12 @@ import {receiveTodo} from '../../actions/todo_actions';
 import allTodos from '../../reducers/selectors';
 
 
-const mapStateToProps = state =>
-    ({
-    todos: allTodos(state)
-});
+const mapStateToProps = state => {
+    debugger
+        ({
+        todos: allTodos(state)
+    });
+}
 
 const mapDispatchToProps = dispatch => ({
     receiveTodo: todo => dispatch(receiveTodo(todo))

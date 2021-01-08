@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoContainer from './todos/todo_list'
+import TodoContainer from './todos/todo_list_container'
 
 const app = () => {
     return (

@@ -1,8 +1,12 @@
 import React from 'react';
+import TodoContainer from './todos/todo_list'
 
-const app = ({store}) => {
+const app = () => {
     return (
-        <h1>hello</h1>
+        <div>
+            <TodoContainer />
+
+        </div>
     )
 }
 

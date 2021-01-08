@@ -1,8 +1,14 @@
-// import configureStore from '../store/store'
+import configureStore from '../store/store'
 
 
-const allTodos = ({store}) => {
-    return Object.keys(store).map(id => store[id]);
+const allTodos = (store) => {
+    debugger
+    const ids = Object.keys(store)
+    console.log(ids);
+
+    const mappedIds = ids.map(id => store[id]);
+
+    return mappedIds;
 }
 
 export default allTodos;

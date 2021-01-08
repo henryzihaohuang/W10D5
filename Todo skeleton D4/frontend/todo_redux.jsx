@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root')
     const store = configureStore()
 
-    debugger
+    // debugger
     //testing
     window.receiveTodo = receiveTodo;
     window.store = configureStore();

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TodoListItem from './todo_list_item'
 
 // export default () => {
     
@@ -16,15 +16,15 @@ class ToDoList extends React.Component {
         const {todos, receiveTodo} = this.props
         
 
-        const titles = this.props.todos.map((el) => {
-            return el.title
-        });
+        // const titles = this.props.todos.map((el) => {
+        //     return el.title
+        // });
 
 debugger
         return(
             
             <ul>
-                <li>{this.props.todos.title}</li>
+                <TodoListItem todo={todo} />
             </ul>
         )
 
